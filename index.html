@@ -6,48 +6,39 @@
 
   </head>
   <body>
-	  <textarea id="text" rows="4" cols="50" placeholder="Enter your Text Here">
+	  <textarea id="input" rows="4" cols="50" placeholder="Enter your Text Here">
 	  </textarea>
-	  <button onclick="convertTheText()"> Convert </button>
- <script language ="javascript">
-function convertTheText(){
-    var englishLayout= {
-      "q":"ض",
-      "w":"ص",
-      "e":"ث",
-      "r":"ق",
-      "t":"ف",
-      "y":"غ",
-      "u":"ع",
-      "i":"ه",
-      "o":"خ",
-      "p":"ح",
-      "[":"ج",
-      "]":"د",
-      "a":"ش",
-      "s":"س",
-      "d":"ي",
-      "f":"ب",
-      "g":"ل",
-      "h":"ا",
-      "j":"ت",
-      "k":"ن",
-      "l":"م",
-      ";":"ك",
-      "'":"ط",
-      "z":"ئ",
-      "x":"ء",
-      "c":"ؤ",
-      "v":"ر",
-      "b":"ﻻ",
-      "n":"ى",
-      "m":"ة",
-      ",":"و",
-      ".":"ز",
-      "/":"ظ"
-    };
+    <br>
+    <button name="convertTheTextToEnglish" onclick="convertTheTextToEnglish()"> Convert To English </button>
+    <button type="button" name="convertTheTextToArabic" onclick="convertTheTextToArabic()"> convert To Arabic</button>
+    <br>
+    output :
+    <br>
+    <p id="output"></p>
+ <script language="javascript">
 
-    }
+ //list of the English characters and it's corresponding Arabic characters
+ var englishLayout= { "q":"ض", "w":"ص", "e":"ث", "r":"ق", "t":"ف", "y":"غ", "u":"ع", "i":"ه", "o":"خ", "p":"ح", "[":"ج", "]":"د", "a":"ش", "s":"س", "d":"ي", "f":"ب", "g":"ل", "h":"ا", "j":"ت", "k":"ن", "l":"م", ";":"ك", "'":"ط", "z":"ئ", "x":"ء", "c":"ؤ", "v":"ر", "b":"ﻻ", "n":"ى", "m":"ة", ",":"و", ".":"ز", "/":"ظ" };
+ //list of the arabic characters and it's corresponding english characters
+ var arabicLayout= { "ض":"q", "ص":"w", "ث":"e", "ق":"r", "ف":"t", "غ":"y", "ع":"u", "ه":"i", "خ":"o", "ح":"p", "ج":"[", "د":"]", "ش":"a", "س":"s", "ي":"d", "ب":"f", "ل":"g", "ا":"h", "ت":"j", "ن":"k", "م":"l", "ك":";", "ط":"'", "ئ":"z", "ء":"x", "ؤ":"c", "ر":"v", "ﻻ":"b", "ى":"n", "ة":"m", "و":",", "ز":".", "ظ":"/" };
+ var input = document.getElementById("input").value;
+ var output="";
+//===> there will be a problem with the لا
+function convertTheTextToEnglish(){
+output="";
+
+  for(var i in input){
+
+    if(arabicLayout.hasOwnProperty(input[i]) )
+        output+=arabicLayout[input[i]] ;
+          //  output+=arabicLayout[input[i
+    else
+      output+=input[i];
+      }
+
+alert(output);
+  }
+
  </script>
 
   </body>
