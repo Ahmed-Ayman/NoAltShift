@@ -1,12 +1,62 @@
 h4{
-  color:white;
-  background:gray;
+  color:004338;
+  text-align: center;
+background-color:#00EAC3;
 
 }
-.row{
-  margin :10%;
-  color:red;
+
+
+.color-primary-0 { color: #00EAC3 }	/* Main Primary color */
+.color-primary-1 { color: #A8EFE3 }
+.color-primary-2 { color: #5CF0D7 }
+.color-primary-3 { color: #00AD90 }
+.color-primary-4 { color: #004338 }
+
+
+.bdy{
+
+background-color: #00EAC3;
+padding-top: 15px;
+padding-bottom: 15px;
+padding-right: 15px;
+padding-left: 15px;
+
+
 }
+
+
 textarea{
-  color : red;
+	margin:auto;
+display:block;
+border-radius: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+background-color:#00EAC3; 
+color : #004338;
+font-size: 2em;
+border-color: #00AD90;
+}
+.btnBox{
+margin-right:  auto ;
+margin-left:  auto ;
+margin-bottom: 2%;
+margin-top:  2%;
+
+}
+.btn{
+margin:auto;
+display:block;
+	
+border-radius: 2px;
+padding:3%;
+background-color: #00EAC3;
+border:none;
+margin-top: 13%;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+font-family: Sans-serif;
+font-size: 2em;
+color: #004338;
+
+}.btn:hover{
+box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.2), 0 8px 25px 0 rgba(0, 0, 0, 0.19);
+background-color: #00E1BB; 
 }
